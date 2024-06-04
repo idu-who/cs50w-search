@@ -3,7 +3,7 @@ $text-light: #202124;
 $link-text-light: #1a0dab;
 $border-light: #dfe1e5;
 $border-focus-light: #4285f4;
-$icon-color-light: #9aa0a6;
+$icon-light: #9aa0a6;
 $secondary-light: #f8f9fa;
 $secondary-text-light: #3c4043;
 $secondary-border-light: #dadce0;
@@ -13,39 +13,47 @@ body {
     background-color: $bg-light;
 }
 
-body, html {
+body,
+html {
     height: 100%;
     min-width: 400px;
     padding: 0;
     margin: 0;
 }
 
-body, input, button {
-    font: 14px arial, sans-serif;
+body,
+input,
+button {
     color: $text-light;
+    font: 14px arial, sans-serif;
 }
 
-h1, ol, ul, li, button {
+h1,
+ol,
+ul,
+li,
+button {
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 button {
     border: none;
-    background: none
+    background: none;
 }
 
 a {
     color: $link-text-light;
-    text-decoration: none
+    text-decoration: none;
 }
 
-a:hover, a:active {
-    text-decoration: underline
+a:hover,
+a:active {
+    text-decoration: underline;
 }
 
 a:visited {
-    color: #681da8
+    color: #681da8;
 }
 
 input:focus {
@@ -65,6 +73,80 @@ input::-moz-focus-inner {
 .section {
     flex-shrink: 0;
     box-sizing: border-box;
+}
+
+#header-section {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 6px;
+}
+
+#header-content {
+    display: inline-block;
+    flex-grow: 1;
+    position: relative;
+    z-index: 986;
+    color: black;
+    font: 13px/27px Roboto, Arial, sans-serif;
+    height: 48px;
+    min-width: auto;
+}
+
+// #header-wrapper {
+//     position: relative;
+//     z-index: 986;
+//     color: black;
+//     font: 13px/27px Roboto,Arial,sans-serif;
+//     height: 48px;
+//     min-width: auto;
+// }
+
+#nav-wrapper {
+    display: flex;
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    flex: 0 0 auto;
+    -moz-box-flex: 0;
+    align-items: center;
+    -moz-box-align: center;
+    justify-content: flex-end;
+    -moz-box-pack: flex-end;
+    float: right;
+    vertical-align: middle;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 48px;
+    line-height: normal;
+    padding: 0 4px 0 0;
+    white-space: nowrap;
+    user-select: none;
+    -moz-user-select: -moz-none;
+}
+
+#nav-items {
+    font-family: arial, sans-serif;
+    line-height: normal;
+    padding-right: 15px;
+}
+
+.nav-item {
+    display: inline-block;
+    padding-left: 15px;
+}
+
+.nav-link {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none;
+    vertical-align: middle;
+    line-height: 24px;
+
+    &:visited {
+        color: rgba(0, 0, 0, 0.87);
+    }
 }
 
 #logo-section {
@@ -121,8 +203,8 @@ input::-moz-focus-inner {
 
 #search-bar:hover {
     background: $bg-light;
-    box-shadow: 0 1px 6px rgba(32,33,36,.28);
-    border-color:transparent;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-color: transparent;
 }
 
 // #search-container.focused {
@@ -155,7 +237,7 @@ input::-moz-focus-inner {
     line-height: 20px;
     width: 20px;
     margin-top: 3px;
-    color: $icon-color-light;
+    color: $icon-light;
 }
 
 .icon {
@@ -184,8 +266,8 @@ input::-moz-focus-inner {
     display: flex;
     flex: 100%;
     background-color: transparent;
-    color: rgba(0,0,0,.87);
-    font: 16px arial,sans-serif;
+    color: rgba(0, 0, 0, 0.87);
+    font: 16px arial, sans-serif;
     line-height: 22px;
     resize: none;
     padding: 0;
@@ -232,7 +314,7 @@ input::-moz-focus-inner {
     }
 }
 
-#clear-icon  {
+#clear-icon {
     height: 100%;
     color: $clear-button-light;
     vertical-align: middle;
@@ -275,7 +357,7 @@ input::-moz-focus-inner {
         background-color: $secondary-light;
         color: $secondary-text-light;
         text-align: center;
-        font: 14px arial,sans-serif;
+        font: 14px arial, sans-serif;
         line-height: 27px;
         height: 36px;
         min-width: 54px;
@@ -290,7 +372,7 @@ input::-moz-focus-inner {
     input[type="submit"]:hover {
         background-color: $secondary-light;
         color: $text-light;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
         border: 1px solid $secondary-border-light;
     }
 
