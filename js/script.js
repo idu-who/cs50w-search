@@ -21,3 +21,13 @@ function clearSearchInput() {
     search_input.value = "";
     hideClearButton();
 }
+
+function submitOnEnter(event) {
+    let key_code = event.keyCode;
+    let target = event.target;
+    if (key_code == "13") {
+        let form = target.closest("form");
+        form.submit();
+        event.preventDefault();
+    }
+}
