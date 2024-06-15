@@ -2,7 +2,7 @@ $bg-light: #fff;
 $text-light: #202124;
 $link-text-light: #1a0dab;
 $border-light: #dfe1e5;
-$border-focus-light: #4285f4;
+$accent-light: #4285f4;
 $icon-light: #9aa0a6;
 $secondary-light: #f8f9fa;
 $secondary-text-light: #3c4043;
@@ -165,6 +165,15 @@ input::-moz-focus-inner {
     margin-top: auto;
 }
 
+#logo-text {
+    position: absolute;
+    left: 215px;
+    bottom: 0;
+    color: $accent-light;
+    font: 16px/16px roboto-regular, arial, sans-serif;
+    white-space: nowrap;
+}
+
 #search-section {
     max-height: 160px;
     padding: 20px;
@@ -233,8 +242,8 @@ input::-moz-focus-inner {
 }
 
 #search-icon {
-    height: 20px;
     line-height: 20px;
+    height: 20px;
     width: 20px;
     margin-top: 3px;
     color: $icon-light;
@@ -349,35 +358,20 @@ input::-moz-focus-inner {
     width: 24px;
 }
 
-#search-buttons-wrapper {
-    height: 70px;
-    padding-top: 18px;
+#search-button {
+    flex: 0 0 auto;
+    background: transparent;
+    height: 44px;
+    width: 44px;
+    padding: 0 13px 0 0;
+    border: none;
+    cursor: pointer;
+}
 
-    input[type="submit"] {
-        background-color: $secondary-light;
-        color: $secondary-text-light;
-        text-align: center;
-        font: 14px arial, sans-serif;
-        line-height: 27px;
-        height: 36px;
-        min-width: 54px;
-        margin: 11px 4px;
-        padding: 0 16px;
-        border: 1px solid #f8f9fa;
-        border-radius: 4px;
-        cursor: pointer;
-        user-select: none;
-    }
-
-    input[type="submit"]:hover {
-        background-color: $secondary-light;
-        color: $text-light;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-        border: 1px solid $secondary-border-light;
-    }
-
-    input[type="submit"]:focus {
-        border: 1px solid $border-focus-light;
-        outline: none;
-    }
+#search-button-icon-box {
+    background: none;
+    color: $accent-light;
+    height: 24px;
+    width: 24px;
+    margin: auto;
 }
