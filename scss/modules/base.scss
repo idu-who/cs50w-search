@@ -1,0 +1,85 @@
+$bg: #fff;
+$text: #202124;
+$link-text: #1a0dab;
+$link-visited: #681da8;
+
+body {
+    background-color: $bg;
+}
+
+body,
+html {
+    height: 100%;
+    min-width: 400px;
+    padding: 0;
+    margin: 0;
+}
+
+body,
+input,
+button {
+    color: $text;
+    font: 14px arial, sans-serif;
+}
+
+h1,
+ol,
+ul,
+li,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+a {
+    color: $link-text;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: $link-visited;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::-moz-focus-inner {
+    border: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.section {
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.icon {
+    display: inline-block;
+    position: relative;
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+    fill: currentColor;
+
+    svg {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+}
