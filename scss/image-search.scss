@@ -93,15 +93,6 @@ input::-moz-focus-inner {
     min-width: auto;
 }
 
-// #header-wrapper {
-//     position: relative;
-//     z-index: 986;
-//     color: black;
-//     font: 13px/27px Roboto,Arial,sans-serif;
-//     height: 48px;
-//     min-width: auto;
-// }
-
 #nav-wrapper {
     display: flex;
     display: -webkit-flex;
@@ -208,20 +199,12 @@ input::-moz-focus-inner {
     border: 1px solid $border-light;
     border-radius: 24px;
     box-shadow: none;
-}
 
-#search-bar:hover {
-    background: $bg-light;
-    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
-    border-color: transparent;
+    &:hover {
+        border-color: transparent;
+        box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    }
 }
-
-// #search-container.focused {
-//     .search-bar {
-//         border-bottom-left-radius: 0;
-//         border-bottom-right-radius: 0;
-//     }
-// }
 
 #search-bar-content {
     display: flex;
