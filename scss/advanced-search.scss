@@ -1,0 +1,254 @@
+@import "modules/header-section.scss";
+
+$bg: #fff;
+$hr-border: #ebebeb;
+$text-primary: #333;
+$text-secondary: #222;
+$text-muted-light: #777;
+$text-muted-dark: #555;
+$text-code: #666;
+$input-border-light: #d9d9d9;
+$input-border-dark: #c0c0c0;
+
+body {
+    position: relative;
+    font-family: arial, sans-serif;
+    min-height: 100%;
+}
+
+// <(?!div|span|a|hr|form)\w+
+html,
+body,
+div,
+span,
+a,
+hr,
+form,
+label,
+input {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+#container {
+    min-height: 100%;
+    margin: 0 auto;
+}
+
+.section {
+    background-color: $bg;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+#heading-bar {
+    color: #d93025;
+    font-size: 20px;
+    margin: 25px 35px;
+}
+
+#heading-text {
+    margin-left: 10px;
+}
+
+.separator {
+    border-bottom: 1px solid $hr-border;
+}
+
+#form-wrapper {
+    width: 96%;
+    max-width: 1140px;
+    min-width: 200px;
+    margin: 40px 2% 0 45px;
+}
+
+.form-block {
+    width: 100%;
+    clear: both;
+
+    .row {
+        clear: both;
+    }
+
+    .mid-spacer,
+    .legend-wrapper,
+    .label-wrapper,
+    .input-wrapper,
+    .sublegend-wrapper,
+    .description-wrapper {
+        display: inline-block;
+        float: left;
+        vertical-align: middle;
+    }
+
+    .left-spacer {
+        @extend .label-wrapper;
+    }
+
+    .mid-spacer {
+        width: 50%;
+        min-width: 167px;
+        min-height: 41px;
+    }
+
+    .legend-wrapper {
+        color: $text-primary;
+        font-size: 16px;
+        font-weight: 500;
+        width: 16%;
+        min-width: 167px;
+        min-height: 42px;
+    }
+
+    .label-wrapper {
+        color: $text-secondary;
+        font-size: 13px;
+        line-height: 16px;
+        width: 16%;
+        height: 42px;
+        min-width: 167px;
+    }
+
+    .input-wrapper {
+        width: 50%;
+        min-width: 167px;
+        min-height: 41px;
+
+        input[type="text"] {
+            border: 1px solid $input-border-light;
+            border-top: 1px solid $input-border-dark;
+            border-radius: 1px;
+            -webkit-border-radius: 1px;
+            -moz-border-radius: 1px;
+            font-size: 13px;
+            text-align: left;
+            height: 25px;
+            width: 100%;
+            padding: 1px 8px;
+        }
+
+        input[type="submit"] {
+            $button-primary: #4d90fe;
+            $button-secondary: #4787ed;
+            $button-border: #3079ed;
+            $button-hover-secondary: #357ae8;
+            $button-hover-border: #2f5bb7;
+
+            float: right;
+            background-color: $button-primary;
+            background-image: -webkit-linear-gradient(top, $button-primary, $button-secondary);
+            background-image: -moz-linear-gradient(top, $button-primary, $button-secondary);
+            background-image: -ms-linear-gradient(top, $button-primary, $button-secondary);
+            background-image: -o-linear-gradient(top, $button-primary, $button-secondary);
+            background-image: linear-gradient(top, $button-primary, $button-secondary);
+            border: 1px solid $button-border;
+            border-radius: 2px;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            color: #fff;
+            font-size: 11px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 100%;
+            height: 30px;
+            min-width: 120px;
+            margin: 10px 0;
+            padding: 0 12px;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            user-select: none;
+            cursor: default;
+            white-space: nowrap;
+            outline: 0;
+
+            &:hover {
+                background-color: $button-hover-secondary;
+                background-image: -webkit-gradient(linear, left top, left bottom, from($button-primary), to($button-hover-secondary));
+                background-image: -webkit-linear-gradient(top, $button-primary, $button-hover-secondary);
+                background-image: -moz-linear-gradient(top, $button-primary, $button-hover-secondary);
+                background-image: -ms-linear-gradient(top, $button-primary, $button-hover-secondary);
+                background-image: -o-linear-gradient(top, $button-primary, $button-hover-secondary);
+                background-image: linear-gradient(top, $button-primary, $button-hover-secondary);
+                border: 1px solid $button-hover-border;
+                border-image: initial;
+                -webkit-border-image: initial;
+            }
+        }
+
+        &#number-range-wrapper {
+            position: relative;
+
+            #number-range-table {
+                display: table;
+                width: 100%;
+
+                .number-range-cell {
+                    display: table-cell;
+                    padding-right: 16px;
+
+                    &#mid {
+                        text-align: center;
+                        color: #202124;
+                        font-size: 13px;
+                        width: 40px;
+                        padding: 0 6px;
+                    }
+                }
+            }
+        }
+    }
+
+    .sublegend-wrapper {
+        color: $text-muted-light;
+        font-size: 13px;
+        font-weight: 700;
+        width: 33%;
+        padding-left: 5px;
+    }
+
+    .description-wrapper {
+        position: relative;
+        color: $text-muted-dark;
+        font-size: 11px;
+        width: 32%;
+        min-width: 160px;
+        margin: 0 0 8px 1%;
+        padding-left: 5px;
+
+        .code {
+            font: 11px monospace;
+            color: $text-code;
+            white-space: pre;
+        }
+    }
+}
+
+.form-separator {
+    border-bottom: 1px solid $hr-border;
+    margin: 18px 0;
+    clear: both;
+}
+
+@media (max-width: 1056px) {
+    .sublegend-wrapper,
+    .description-wrapper {
+        display: none !important;
+    }
+}
+
+.cell {
+    display: table-cell;
+    vertical-align: middle;
+    height: 30px;
+}
+
+.text-input {
+    padding-right: 16px;
+}
