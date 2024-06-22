@@ -18,26 +18,17 @@
 
 #nav-wrapper {
     display: flex;
-    display: -webkit-flex;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
     flex: 0 0 auto;
-    -moz-box-flex: 0;
     align-items: center;
-    -moz-box-align: center;
     justify-content: flex-end;
-    -moz-box-pack: flex-end;
     float: right;
     vertical-align: middle;
     box-sizing: border-box;
-    -moz-box-sizing: border-box;
     height: 48px;
     line-height: normal;
     padding: 0 4px 0 0;
     white-space: nowrap;
     user-select: none;
-    -moz-user-select: -moz-none;
 }
 
 #nav-items {

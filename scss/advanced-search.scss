@@ -124,8 +124,6 @@ input {
             border: 1px solid $input-border-light;
             border-top: 1px solid $input-border-dark;
             border-radius: 1px;
-            -webkit-border-radius: 1px;
-            -moz-border-radius: 1px;
             font-size: 13px;
             text-align: left;
             height: 25px;
@@ -142,15 +140,9 @@ input {
 
             float: right;
             background-color: $button-primary;
-            background-image: -webkit-linear-gradient(top, $button-primary, $button-secondary);
-            background-image: -moz-linear-gradient(top, $button-primary, $button-secondary);
-            background-image: -ms-linear-gradient(top, $button-primary, $button-secondary);
-            background-image: -o-linear-gradient(top, $button-primary, $button-secondary);
             background-image: linear-gradient(top, $button-primary, $button-secondary);
             border: 1px solid $button-border;
             border-radius: 2px;
-            -webkit-border-radius: 2px;
-            -moz-border-radius: 2px;
             color: #fff;
             font-size: 11px;
             font-weight: bold;
@@ -161,8 +153,6 @@ input {
             margin: 10px 0;
             padding: 0 12px;
             box-shadow: none;
-            -webkit-box-shadow: none;
-            -moz-box-shadow: none;
             user-select: none;
             cursor: default;
             white-space: nowrap;
@@ -170,15 +160,9 @@ input {
 
             &:hover {
                 background-color: $button-hover-secondary;
-                background-image: -webkit-gradient(linear, left top, left bottom, from($button-primary), to($button-hover-secondary));
-                background-image: -webkit-linear-gradient(top, $button-primary, $button-hover-secondary);
-                background-image: -moz-linear-gradient(top, $button-primary, $button-hover-secondary);
-                background-image: -ms-linear-gradient(top, $button-primary, $button-hover-secondary);
-                background-image: -o-linear-gradient(top, $button-primary, $button-hover-secondary);
                 background-image: linear-gradient(top, $button-primary, $button-hover-secondary);
                 border: 1px solid $button-hover-border;
                 border-image: initial;
-                -webkit-border-image: initial;
             }
         }
 
